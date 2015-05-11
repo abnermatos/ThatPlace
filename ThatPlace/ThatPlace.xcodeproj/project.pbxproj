@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965BCA921B01539C0024AAF0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA911B01539C0024AAF0 /* FeedTableViewController.m */; };
 		CB0C45E81B012A8F008BCF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45E71B012A8F008BCF4E /* main.m */; };
 		CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45EA1B012A8F008BCF4E /* AppDelegate.m */; };
 		CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		965BCA901B01539C0024AAF0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		965BCA911B01539C0024AAF0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		CB0C45E21B012A8F008BCF4E /* ThatPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0C45E61B012A8F008BCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0C45E71B012A8F008BCF4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				CB0C45EF1B012A8F008BCF4E /* ViewController.h */,
 				CB0C45F01B012A8F008BCF4E /* ViewController.m */,
 				CB0C45F21B012A8F008BCF4E /* Main.storyboard */,
+				965BCA901B01539C0024AAF0 /* FeedTableViewController.h */,
+				965BCA911B01539C0024AAF0 /* FeedTableViewController.m */,
 				CB0C45F51B012A8F008BCF4E /* Images.xcassets */,
 				CB0C45F71B012A8F008BCF4E /* LaunchScreen.xib */,
 				CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */,
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965BCA921B01539C0024AAF0 /* FeedTableViewController.m in Sources */,
 				CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */,
 				CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */,
 				CB0C45F11B012A8F008BCF4E /* ViewController.m in Sources */,
@@ -422,6 +428,7 @@
 				CB0C460A1B012A8F008BCF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB0C460B1B012A8F008BCF4E /* Build configuration list for PBXNativeTarget "ThatPlaceTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				CB0C460D1B012A8F008BCF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
