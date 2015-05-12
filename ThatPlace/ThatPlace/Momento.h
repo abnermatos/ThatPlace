@@ -12,7 +12,6 @@
 
 @property (nonatomic, retain) NSString* id;
 @property (nonatomic, retain) NSString* titulo;
-@property (nonatomic, retain) NSString* humor;
 @property (nonatomic, retain) NSString* descricao;
 @property (nonatomic, retain) NSString* idUsuairo;
 

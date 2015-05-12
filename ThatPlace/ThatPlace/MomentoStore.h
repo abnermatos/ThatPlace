@@ -16,7 +16,7 @@
 
 + (instancetype)sharedStore;
 
-- (Momento*)createMomentoWithTitulo:(NSString *)titulo andHumor:(NSString *)humor andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
+- (Momento*)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
 - (BOOL)saveChanges;
 -(void)removeMomento:(Momento*)momento;
 @end

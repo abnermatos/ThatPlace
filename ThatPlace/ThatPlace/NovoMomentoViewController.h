@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Momento.h"
 
 @interface NovoMomentoViewController : UIViewController
+
+@property (strong, nonatomic) Momento *momento;
 
 @end

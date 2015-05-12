@@ -12,7 +12,6 @@
 
 @dynamic id;
 @dynamic titulo;
-@dynamic humor;
 @dynamic descricao;
 @dynamic idUsuairo;
 

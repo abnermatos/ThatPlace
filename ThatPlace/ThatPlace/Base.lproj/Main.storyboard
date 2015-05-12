@@ -192,16 +192,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" ambiguous="YES" misplaced="YES" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
-                                <rect key="frame" x="44" y="382" width="287" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="A8z-YB-Wwg"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="VCC-F8-M21"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-cC-cTL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="303"/>
                                 <constraints>
@@ -230,6 +220,16 @@
                                     <action selector="btAudio:" destination="7AH-cF-VRA" eventType="touchUpInside" id="3so-As-TDc"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" ambiguous="YES" misplaced="YES" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
+                                <rect key="frame" x="44" y="382" width="287" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="A8z-YB-Wwg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="VCC-F8-M21"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,8 +242,9 @@
                             <constraint firstItem="h86-c1-y6Z" firstAttribute="leading" secondItem="pUb-6p-LlM" secondAttribute="leading" id="HXJ-1Y-Uo9"/>
                             <constraint firstItem="c0H-h0-AxW" firstAttribute="leading" secondItem="JmO-aR-p8m" secondAttribute="leadingMargin" constant="-16" id="I7Z-q2-rOb"/>
                             <constraint firstItem="XkK-cC-cTL" firstAttribute="leading" secondItem="JmO-aR-p8m" secondAttribute="leadingMargin" constant="-16" id="Lb8-yQ-BF1"/>
-                            <constraint firstItem="h86-c1-y6Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ne6-95-i15" secondAttribute="bottom" priority="750" constant="8" id="MEO-ah-IIw"/>
+                            <constraint firstItem="h86-c1-y6Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ne6-95-i15" secondAttribute="bottom" constant="8" id="MEO-ah-IIw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XkK-cC-cTL" secondAttribute="trailing" constant="-16" id="aMy-vO-PzF"/>
+                            <constraint firstItem="h86-c1-y6Z" firstAttribute="top" relation="lessThanOrEqual" secondItem="Ne6-95-i15" secondAttribute="bottom" constant="21" id="cdq-5m-P9o"/>
                             <constraint firstItem="T3y-0d-bK5" firstAttribute="top" secondItem="c0H-h0-AxW" secondAttribute="bottom" id="fRv-Nm-Wg4"/>
                             <constraint firstItem="pUb-6p-LlM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="h86-c1-y6Z" secondAttribute="bottom" constant="8" id="gPC-Fs-60B"/>
                             <constraint firstItem="Ne6-95-i15" firstAttribute="width" secondItem="h86-c1-y6Z" secondAttribute="width" id="tjc-Cw-etn"/>
