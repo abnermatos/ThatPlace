@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		963F6FDD1B0284F3003F31AB /* NovoMomentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FDC1B0284F3003F31AB /* NovoMomentoViewController.m */; };
 		963F6FE01B02898F003F31AB /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FDF1B02898F003F31AB /* Usuario.m */; };
+		963F6FE31B028DD0003F31AB /* UsuarioStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FE21B028DD0003F31AB /* UsuarioStore.m */; };
 		965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */; };
 		965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */; };
 		CB0C45E81B012A8F008BCF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45E71B012A8F008BCF4E /* main.m */; };
@@ -36,6 +37,8 @@
 		963F6FDC1B0284F3003F31AB /* NovoMomentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovoMomentoViewController.m; sourceTree = "<group>"; };
 		963F6FDE1B02898F003F31AB /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		963F6FDF1B02898F003F31AB /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		963F6FE11B028DD0003F31AB /* UsuarioStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioStore.h; sourceTree = "<group>"; };
+		963F6FE21B028DD0003F31AB /* UsuarioStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioStore.m; sourceTree = "<group>"; };
 		965BCA961B015BEB0024AAF0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		965BCA991B015D350024AAF0 /* FeedTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell1.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				CB0C45F51B012A8F008BCF4E /* Images.xcassets */,
 				963F6FDE1B02898F003F31AB /* Usuario.h */,
 				963F6FDF1B02898F003F31AB /* Usuario.m */,
+				963F6FE11B028DD0003F31AB /* UsuarioStore.h */,
+				963F6FE21B028DD0003F31AB /* UsuarioStore.m */,
 				CB0C45F71B012A8F008BCF4E /* LaunchScreen.xib */,
 				CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */,
 				CB0C45E51B012A8F008BCF4E /* Supporting Files */,
@@ -246,6 +251,7 @@
 				965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */,
 				CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */,
 				CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */,
+				963F6FE31B028DD0003F31AB /* UsuarioStore.m in Sources */,
 				963F6FE01B02898F003F31AB /* Usuario.m in Sources */,
 				CB0C45F11B012A8F008BCF4E /* ViewController.m in Sources */,
 				CB0C45E81B012A8F008BCF4E /* main.m in Sources */,
