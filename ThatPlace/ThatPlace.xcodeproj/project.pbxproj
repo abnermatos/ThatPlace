@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		965BCA921B01539C0024AAF0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA911B01539C0024AAF0 /* FeedTableViewController.m */; };
+		965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */; };
+		965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */; };
 		CB0C45E81B012A8F008BCF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45E71B012A8F008BCF4E /* main.m */; };
 		CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45EA1B012A8F008BCF4E /* AppDelegate.m */; };
 		CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */; };
@@ -29,8 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		965BCA901B01539C0024AAF0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
-		965BCA911B01539C0024AAF0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		965BCA961B015BEB0024AAF0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		965BCA991B015D350024AAF0 /* FeedTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell1.h; sourceTree = "<group>"; };
+		965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell1.m; sourceTree = "<group>"; };
 		CB0C45E21B012A8F008BCF4E /* ThatPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0C45E61B012A8F008BCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0C45E71B012A8F008BCF4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,10 +92,12 @@
 				CB0C45E91B012A8F008BCF4E /* AppDelegate.h */,
 				CB0C45EA1B012A8F008BCF4E /* AppDelegate.m */,
 				CB0C45EF1B012A8F008BCF4E /* ViewController.h */,
+				965BCA961B015BEB0024AAF0 /* FeedTableViewController.h */,
+				965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */,
 				CB0C45F01B012A8F008BCF4E /* ViewController.m */,
 				CB0C45F21B012A8F008BCF4E /* Main.storyboard */,
-				965BCA901B01539C0024AAF0 /* FeedTableViewController.h */,
-				965BCA911B01539C0024AAF0 /* FeedTableViewController.m */,
+				965BCA991B015D350024AAF0 /* FeedTableViewCell1.h */,
+				965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */,
 				CB0C45F51B012A8F008BCF4E /* Images.xcassets */,
 				CB0C45F71B012A8F008BCF4E /* LaunchScreen.xib */,
 				CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */,
@@ -227,7 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965BCA921B01539C0024AAF0 /* FeedTableViewController.m in Sources */,
+				965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */,
+				965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */,
 				CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */,
 				CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */,
 				CB0C45F11B012A8F008BCF4E /* ViewController.m in Sources */,
