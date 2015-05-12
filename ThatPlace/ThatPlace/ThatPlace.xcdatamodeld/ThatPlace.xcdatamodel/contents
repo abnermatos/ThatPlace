@@ -6,6 +6,11 @@
         <attribute name="idUsuario" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Recurso" representedClassName="Recurso" syncable="YES">
+        <attribute name="descricaoRecurso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idMomento" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,5 +19,6 @@
     <elements>
         <element name="Usuario" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Momento" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Recurso" positionX="-36" positionY="45" width="128" height="90"/>
     </elements>
 </model>
