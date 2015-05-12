@@ -10,6 +10,8 @@
 		963F6FDD1B0284F3003F31AB /* NovoMomentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FDC1B0284F3003F31AB /* NovoMomentoViewController.m */; };
 		963F6FE01B02898F003F31AB /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FDF1B02898F003F31AB /* Usuario.m */; };
 		963F6FE31B028DD0003F31AB /* UsuarioStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FE21B028DD0003F31AB /* UsuarioStore.m */; };
+		963F6FE61B029432003F31AB /* Momento.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FE51B029432003F31AB /* Momento.m */; };
+		963F6FE91B029613003F31AB /* MomentoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 963F6FE81B029613003F31AB /* MomentoStore.m */; };
 		965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */; };
 		965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */; };
 		CB0C45E81B012A8F008BCF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C45E71B012A8F008BCF4E /* main.m */; };
@@ -39,6 +41,10 @@
 		963F6FDF1B02898F003F31AB /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 		963F6FE11B028DD0003F31AB /* UsuarioStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuarioStore.h; sourceTree = "<group>"; };
 		963F6FE21B028DD0003F31AB /* UsuarioStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuarioStore.m; sourceTree = "<group>"; };
+		963F6FE41B029432003F31AB /* Momento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Momento.h; sourceTree = "<group>"; };
+		963F6FE51B029432003F31AB /* Momento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Momento.m; sourceTree = "<group>"; };
+		963F6FE71B029613003F31AB /* MomentoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MomentoStore.h; sourceTree = "<group>"; };
+		963F6FE81B029613003F31AB /* MomentoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentoStore.m; sourceTree = "<group>"; };
 		965BCA961B015BEB0024AAF0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		965BCA991B015D350024AAF0 /* FeedTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell1.h; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				963F6FDF1B02898F003F31AB /* Usuario.m */,
 				963F6FE11B028DD0003F31AB /* UsuarioStore.h */,
 				963F6FE21B028DD0003F31AB /* UsuarioStore.m */,
+				963F6FE71B029613003F31AB /* MomentoStore.h */,
+				963F6FE81B029613003F31AB /* MomentoStore.m */,
+				963F6FE41B029432003F31AB /* Momento.h */,
+				963F6FE51B029432003F31AB /* Momento.m */,
 				CB0C45F71B012A8F008BCF4E /* LaunchScreen.xib */,
 				CB0C45EC1B012A8F008BCF4E /* ThatPlace.xcdatamodeld */,
 				CB0C45E51B012A8F008BCF4E /* Supporting Files */,
@@ -249,11 +259,13 @@
 			files = (
 				965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */,
 				965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */,
+				963F6FE91B029613003F31AB /* MomentoStore.m in Sources */,
 				CB0C45EE1B012A8F008BCF4E /* ThatPlace.xcdatamodeld in Sources */,
 				CB0C45EB1B012A8F008BCF4E /* AppDelegate.m in Sources */,
 				963F6FE31B028DD0003F31AB /* UsuarioStore.m in Sources */,
 				963F6FE01B02898F003F31AB /* Usuario.m in Sources */,
 				CB0C45F11B012A8F008BCF4E /* ViewController.m in Sources */,
+				963F6FE61B029432003F31AB /* Momento.m in Sources */,
 				CB0C45E81B012A8F008BCF4E /* main.m in Sources */,
 				963F6FDD1B0284F3003F31AB /* NovoMomentoViewController.m in Sources */,
 			);
