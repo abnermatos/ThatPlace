@@ -33,6 +33,7 @@
 - (IBAction)btSalvar:(id)sender {
     [[MomentoStore sharedStore]createMomentoWithTitulo:self.tfTitulo.text andDescricao:self.tvDescricao.text andIdUsuario:NULL];
     [self.navigationController popViewControllerAnimated:YES];
+    //[[MomentoStore sharedStore] getAllMomento];
 }
 
 @end

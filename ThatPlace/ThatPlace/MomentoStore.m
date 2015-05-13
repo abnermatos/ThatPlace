@@ -8,6 +8,7 @@
 
 #import "MomentoStore.h"
 #import "Momento.h"
+#import "AppDelegate.h"
 
 @import CoreData;
 
@@ -23,8 +24,11 @@
 +(instancetype)sharedStore{
     static MomentoStore *sharedStore = nil;
     
-    if(!sharedStore)
+    if(!sharedStore){
+//        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
         sharedStore = [[self alloc]initPrivate];
+//        [[MomentoStore sharedStore] setManagedObjectContext:appDelegate.managedObjectContext];
+    }
     return sharedStore;
 }
 -(instancetype)initPrivate{
