@@ -16,4 +16,5 @@
 -(void)loadAllMomento;
 -(NSArray*)getAllMomento;
 -(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+- (BOOL)saveChanges;
 @end;

@@ -8,8 +8,12 @@
 
 #import "MainViewController.h"
 #import "CustomAnnotation.h"
+#import "MomentoStore.h"
+#import "Momento.h"
 
-@interface MainViewController ()
+@interface MainViewController (){
+    NSInteger i;
+}
 
 @end
 
@@ -74,6 +78,30 @@
 //        return annotationView;}
 //}
 
+- (void)viewDidAppear:(BOOL)animated{
+    
+    NSLog(@" number of annot : %lu",mainMapkit.annotations.count);
+    
+    if (mainMapkit.annotations.count > 0){
+        if (mainMapkit.annotations.count == 1)
+        {
+            Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:[[[MomentoStore sharedStore]getAllMomento]count]-1];
+            
+            CustomAnnotation* myAnnot = [mainMapkit.annotations objectAtIndex:0];
+            myAnnot.title = momento.titulo;
+        }
+        else
+        {
+            for (CustomAnnotation* myAnnot in mainMapkit.annotations){
+                if ([myAnnot.title isEqualToString:@"New"]){
+                    myAnnot.title = @"mudado";
+                }}
+            
+        }
+
+    }
+
+}
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
@@ -83,6 +111,7 @@
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation{
     if ([annotation isKindOfClass:[MKUserLocation class]])
     {
+        ((MKUserLocation *)annotation).title = @"You are here";
         MKAnnotationView *pinView = (MKAnnotationView *) [theMapView dequeueReusableAnnotationViewWithIdentifier:@"pinView"];
         if (!pinView) {
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinview"];
@@ -116,7 +145,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:
 (NSArray *)locations
 {
-    NSLog(@"location info object=%@", [locations lastObject]);
+    //NSLog(@"location info object=%@", [locations lastObject]);
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{

@@ -78,4 +78,21 @@
 -(NSArray*)getAllMomento{
     return [self.privateItems copy];
 }
+
+- (BOOL)saveChanges {
+    NSError *error;
+    
+    if ([self.managedObjectContext hasChanges]) {
+        BOOL successful = [self.managedObjectContext save:&error];
+        
+        if (!successful) {
+            NSLog(@"Error saving: %@", [error localizedDescription]);
+        }
+        
+        return successful;
+    }
+    
+    return YES;
+}
+
 @end
