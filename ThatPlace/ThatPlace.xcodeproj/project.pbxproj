@@ -24,6 +24,10 @@
 		CB0C45F61B012A8F008BCF4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0C45F51B012A8F008BCF4E /* Images.xcassets */; };
 		CB0C45F91B012A8F008BCF4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0C45F71B012A8F008BCF4E /* LaunchScreen.xib */; };
 		CB0C46051B012A8F008BCF4E /* ThatPlaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C46041B012A8F008BCF4E /* ThatPlaceTests.m */; };
+		CB0C464F1B039B8F008BCF4E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C464E1B039B8F008BCF4E /* MainViewController.m */; };
+		CB0C46511B039C23008BCF4E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0C46501B039C23008BCF4E /* MapKit.framework */; };
+		CB0C46531B039C2A008BCF4E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0C46521B039C2A008BCF4E /* CoreLocation.framework */; };
+		CB0C46561B039CFB008BCF4E /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0C46551B039CFB008BCF4E /* CustomAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,12 @@
 		CB0C45FE1B012A8F008BCF4E /* ThatPlaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThatPlaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0C46031B012A8F008BCF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB0C46041B012A8F008BCF4E /* ThatPlaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThatPlaceTests.m; sourceTree = "<group>"; };
+		CB0C464D1B039B8F008BCF4E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CB0C464E1B039B8F008BCF4E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CB0C46501B039C23008BCF4E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CB0C46521B039C2A008BCF4E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CB0C46551B039CFB008BCF4E /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		CB0C46571B039D10008BCF4E /* CustomAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0C46531B039C2A008BCF4E /* CoreLocation.framework in Frameworks */,
+				CB0C46511B039C23008BCF4E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,11 +123,15 @@
 		963F6FF11B02D375003F31AB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB0C45EF1B012A8F008BCF4E /* ViewController.h */,
+				CB0C46571B039D10008BCF4E /* CustomAnnotation.h */,
+				CB0C46551B039CFB008BCF4E /* CustomAnnotation.m */,
+				CB0C464D1B039B8F008BCF4E /* MainViewController.h */,
+				CB0C464E1B039B8F008BCF4E /* MainViewController.m */,
 				965BCA961B015BEB0024AAF0 /* FeedTableViewController.h */,
 				965BCA971B015BEB0024AAF0 /* FeedTableViewController.m */,
 				963F6FDB1B0284F3003F31AB /* NovoMomentoViewController.h */,
 				963F6FDC1B0284F3003F31AB /* NovoMomentoViewController.m */,
+				CB0C45EF1B012A8F008BCF4E /* ViewController.h */,
 				CB0C45F01B012A8F008BCF4E /* ViewController.m */,
 				965BCA991B015D350024AAF0 /* FeedTableViewCell1.h */,
 				965BCA9A1B015D350024AAF0 /* FeedTableViewCell1.m */,
@@ -134,6 +150,8 @@
 		CB0C45D91B012A8F008BCF4E = {
 			isa = PBXGroup;
 			children = (
+				CB0C46521B039C2A008BCF4E /* CoreLocation.framework */,
+				CB0C46501B039C23008BCF4E /* MapKit.framework */,
 				CB0C45E41B012A8F008BCF4E /* ThatPlace */,
 				CB0C46011B012A8F008BCF4E /* ThatPlaceTests */,
 				CB0C45E31B012A8F008BCF4E /* Products */,
@@ -291,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0C46561B039CFB008BCF4E /* CustomAnnotation.m in Sources */,
 				965BCA981B015BEB0024AAF0 /* FeedTableViewController.m in Sources */,
 				963F6FEF1B02A441003F31AB /* RecursoStore.m in Sources */,
 				965BCA9B1B015D350024AAF0 /* FeedTableViewCell1.m in Sources */,
@@ -302,6 +321,7 @@
 				CB0C45F11B012A8F008BCF4E /* ViewController.m in Sources */,
 				963F6FE61B029432003F31AB /* Momento.m in Sources */,
 				CB0C45E81B012A8F008BCF4E /* main.m in Sources */,
+				CB0C464F1B039B8F008BCF4E /* MainViewController.m in Sources */,
 				963F6FDD1B0284F3003F31AB /* NovoMomentoViewController.m in Sources */,
 				963F6FEC1B02A336003F31AB /* Recurso.m in Sources */,
 			);

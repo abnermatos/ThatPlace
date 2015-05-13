@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UFY-g6-y6Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UFY-g6-y6Y">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Fh9-KJ-u1Q">
             <objects>
-                <viewController id="aat-ik-6m3" sceneMemberID="viewController">
+                <viewController id="aat-ik-6m3" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eCf-gw-4vh"/>
                         <viewControllerLayoutGuide type="bottom" id="fix-oy-Kbj"/>
@@ -18,57 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-1K-CEV">
-                                <rect key="frame" x="16" y="598" width="58" height="49"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="A1d-VQ-9Yc"/>
-                                    <constraint firstAttribute="width" constant="58" id="wc5-Jw-P3j"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="mapViewBotao1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8K-P9-2NC">
-                                <rect key="frame" x="301" y="598" width="58" height="49"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button" image="mapViewBotao3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xxL-SF-sTf">
+                                <rect key="frame" x="-9" y="0.0" width="384" height="667"/>
                                 <connections>
-                                    <segue destination="7AH-cF-VRA" kind="push" id="vMB-5w-8oH"/>
+                                    <outlet property="delegate" destination="aat-ik-6m3" id="3be-yr-Eem"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qb-nb-QBo">
-                                <rect key="frame" x="101" y="598" width="172" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="RcT-Nx-Y7X"/>
-                                </constraints>
-                                <state key="normal" image="mapViewBotao2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bSz-8t-oZC" kind="modal" id="zpw-pl-Qaz"/>
-                                </connections>
-                            </button>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="h8K-P9-2NC" firstAttribute="top" secondItem="7qb-nb-QBo" secondAttribute="top" id="7di-ra-Gu6"/>
-                            <constraint firstItem="0Gg-1K-CEV" firstAttribute="leading" secondItem="Wpq-fn-y6u" secondAttribute="leadingMargin" id="8vk-Bj-fGy"/>
-                            <constraint firstItem="7qb-nb-QBo" firstAttribute="leading" secondItem="0Gg-1K-CEV" secondAttribute="trailing" priority="250" constant="56" id="DoQ-5l-XPR"/>
-                            <constraint firstItem="0Gg-1K-CEV" firstAttribute="height" secondItem="h8K-P9-2NC" secondAttribute="height" id="EN9-fa-2PR"/>
-                            <constraint firstItem="h8K-P9-2NC" firstAttribute="height" secondItem="7qb-nb-QBo" secondAttribute="height" id="LIh-u4-Gga"/>
-                            <constraint firstItem="0Gg-1K-CEV" firstAttribute="height" secondItem="7qb-nb-QBo" secondAttribute="height" id="LMf-P6-FDG"/>
-                            <constraint firstItem="0Gg-1K-CEV" firstAttribute="top" secondItem="7qb-nb-QBo" secondAttribute="top" id="Lih-9z-cbd"/>
-                            <constraint firstItem="h8K-P9-2NC" firstAttribute="trailing" secondItem="Wpq-fn-y6u" secondAttribute="trailingMargin" id="UYT-w2-0hS"/>
-                            <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="0Gg-1K-CEV" secondAttribute="bottom" constant="20" id="Wz8-Ef-xXC"/>
-                            <constraint firstItem="h8K-P9-2NC" firstAttribute="leading" secondItem="7qb-nb-QBo" secondAttribute="trailing" priority="250" constant="57" id="aKi-mQ-U7B"/>
-                            <constraint firstItem="0Gg-1K-CEV" firstAttribute="width" secondItem="h8K-P9-2NC" secondAttribute="width" id="jcf-u6-tYS"/>
-                            <constraint firstAttribute="centerX" secondItem="7qb-nb-QBo" secondAttribute="centerX" constant="0.5" id="oXG-0m-cPq"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yir-Fk-E2S"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mainMapkit" destination="xxL-SF-sTf" id="i57-N2-QhI"/>
+                        <segue destination="7AH-cF-VRA" kind="push" identifier="segueCadastroMomento" id="Vtk-2T-pmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc9-Y9-NIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,8 +440,6 @@
         <image name="BotaoAudio" width="287" height="59"/>
         <image name="botaoDeMais" width="1560" height="1331"/>
         <image name="botaoSalvar" width="370" height="59"/>
-        <image name="mapViewBotao1" width="59" height="49"/>
         <image name="mapViewBotao2" width="117" height="44"/>
-        <image name="mapViewBotao3" width="59" height="50"/>
     </resources>
 </document>
