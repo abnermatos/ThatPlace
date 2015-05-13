@@ -7,8 +7,12 @@
 //
 
 #import "FeedTableViewController.h"
+#import "Momento.h"
+#import "MomentoStore.h"
+#import "FeedTableViewCell1.h"
 
-@interface FeedTableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FeedTableViewController () //<UITableViewDataSource, UITableViewDelegate,NSFetchedResultsControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewFeed;
 
 @end
 
@@ -16,21 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 8;
+    return [[[MomentoStore sharedStore]getAllMomento]count];
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [tableView dequeueReusableCellWithIdentifier:@"Cell1"];
+    static NSString *cellIdentifier = @"Cell1";
+    
+    FeedTableViewCell1 *cell = (FeedTableViewCell1 *)[self.tableViewFeed
+                                                dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[FeedTableViewCell1 alloc] initWithStyle:
+                UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:indexPath.row];
+    
+    cell.lbTitulo.text = momento.titulo;
+    
+    return cell;
 }
-
 
 @end
