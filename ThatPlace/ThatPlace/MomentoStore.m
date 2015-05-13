@@ -20,7 +20,7 @@
 @end
 
 @implementation MomentoStore
-//
+
 +(instancetype)sharedStore{
     static MomentoStore *sharedStore = nil;
     
