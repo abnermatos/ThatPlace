@@ -13,6 +13,7 @@
 @interface MomentoStore ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic) NSMutableArray *privateItems;
 
 @end
 
@@ -37,6 +38,26 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Momento";
 - (instancetype)initPrivate {
     self = [super init];
     return self;
+}
+-(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext{
+    if(!self.managedObjectContext){
+        _managedObjectContext = managedObjectContext;
+        [self loadAllMomento];
+    }
+}
+-(void)loadAllMomento{
+    if(!self.privateItems){                                                //Nome da ENTIDADE, não da classe
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Momento"];
+        NSError *error;
+        NSArray *result = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        if(!result){
+            [NSException raise:@"Fetch failed" format:@"Reason: %@",[error localizedDescription]];
+        }
+        self.privateItems = [NSMutableArray arrayWithArray:result];
+    }
+}
+-(NSArray*)getAllMomento{
+    return [self.privateItems copy];
 }
 -(Momento *)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString *)descricao andIdUsuario:(NSString *)idUsuario{
     

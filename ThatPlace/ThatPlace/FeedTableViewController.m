@@ -38,7 +38,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FeedTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1"];
     
-    Momento *momento = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    //Momento *momento = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:indexPath.row];
     cell.lbTitulo.text = momento.titulo;
     //FALTA DATA E FOTO
     

@@ -19,4 +19,6 @@
 - (Momento*)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
 - (BOOL)saveChanges;
 -(void)removeMomento:(Momento*)momento;
+-(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+-(NSArray*)getAllMomento;
 @end
