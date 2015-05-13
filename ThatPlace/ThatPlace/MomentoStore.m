@@ -41,22 +41,20 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Momento";
 }
 -(Momento *)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString *)descricao andIdUsuario:(NSString *)idUsuario{
     
-    NSLog(@"LOLOLOLOLOL %@",self.managedObjectContext);
     Momento *momento = [NSEntityDescription
                                 insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
                                 inManagedObjectContext:self.managedObjectContext];
     momento.id = [[[NSUUID alloc] init] UUIDString];
     momento.titulo = titulo;
     momento.descricao = descricao;
-    momento.idUsuairo = idUsuario;
-    NSLog(@"Andador"); //É LOGO ANTES DESSA LINHA
+    momento.idUsuario = idUsuario;
     
     NSError *error;
     
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Could not save %@, %@", error, error.userInfo);
     }
-    NSLog(@"O CREATE ESTÁ OK");
+    
     return momento;
 }
 
@@ -94,6 +92,12 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Momento";
         
         // Set the batch size to a suitable number.
         [fetchRequest setFetchBatchSize:20];
+        
+        // Edit the sort key as appropriate.
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"titulo" ascending:YES];
+        NSArray *sortDescriptors = @[sortDescriptor];
+        
+        [fetchRequest setSortDescriptors:sortDescriptors];
         
         // Edit the section name key path and cache name if appropriate.
         // nil for section name key path means "no sections".

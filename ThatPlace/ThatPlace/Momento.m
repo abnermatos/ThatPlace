@@ -13,6 +13,6 @@
 @dynamic id;
 @dynamic titulo;
 @dynamic descricao;
-@dynamic idUsuairo;
+@dynamic idUsuario;
 
 @end
