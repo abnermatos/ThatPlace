@@ -11,6 +11,4 @@
 
 @interface NovoMomentoViewController : UIViewController
 
-@property (strong, nonatomic) Momento *momento;
-
 @end

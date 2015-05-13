@@ -11,9 +11,8 @@
 #import "MomentoStore.h"
 #import "FeedTableViewCell1.h"
 
-@interface FeedTableViewController () <UITableViewDataSource, UITableViewDelegate,NSFetchedResultsControllerDelegate>
-
-@property (nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;
+@interface FeedTableViewController () //<UITableViewDataSource, UITableViewDelegate,NSFetchedResultsControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewFeed;
 
 @end
 
@@ -21,30 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[MomentoStore sharedStore] fetchedResultsController].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (NSFetchedResultsController *)fetchedResultsController {
-    return [[MomentoStore sharedStore] fetchedResultsController];
-}
-
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self.fetchedResultsController sections][section] numberOfObjects];
+    return [[[MomentoStore sharedStore]getAllMomento]count];
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FeedTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1"];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //Momento *momento = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell1";
+    
+    FeedTableViewCell1 *cell = (FeedTableViewCell1 *)[self.tableViewFeed
+                                                dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[FeedTableViewCell1 alloc] initWithStyle:
+                UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
     Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:indexPath.row];
+    
     cell.lbTitulo.text = momento.titulo;
-    //FALTA DATA E FOTO
     
     return cell;
 }
-
 
 @end
