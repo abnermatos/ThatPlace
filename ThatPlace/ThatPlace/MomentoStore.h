@@ -13,7 +13,7 @@
 + (instancetype)sharedStore;
 
 - (void)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
+-(void)loadAllMomento;
 -(NSArray*)getAllMomento;
 -(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
-
 @end;

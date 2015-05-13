@@ -13,18 +13,32 @@
 
 @interface FeedTableViewController () //<UITableViewDataSource, UITableViewDelegate,NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewFeed;
-
+@property (weak, nonatomic) NSArray *arrayMomentos;
 @end
 
 @implementation FeedTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _arrayMomentos = [[MomentoStore sharedStore] getAllMomento];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+//Adicionado
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[MomentoStore sharedStore] loadAllMomento];
+    _arrayMomentos = [[MomentoStore sharedStore] getAllMomento];
+    
+    for(Momento *mom in self.arrayMomentos){
+        NSLog(@"%@", mom.titulo);
+    }
+    
+    [self.tableViewFeed reloadData];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [[[MomentoStore sharedStore]getAllMomento]count];
@@ -44,6 +58,7 @@
     Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:indexPath.row];
     
     cell.lbTitulo.text = momento.titulo;
+    NSLog(@"Descricao: %@",momento.descricao);
     
     return cell;
 }
