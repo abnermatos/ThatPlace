@@ -58,6 +58,7 @@
     Momento *momento = [[[MomentoStore sharedStore]getAllMomento] objectAtIndex:indexPath.row];
     
     cell.lbTitulo.text = momento.titulo;
+    NSLog(@"Descricao: %@",momento.descricao);
     
     return cell;
 }

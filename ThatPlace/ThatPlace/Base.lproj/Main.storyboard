@@ -24,8 +24,12 @@
                                     <outlet property="delegate" destination="aat-ik-6m3" id="3be-yr-Eem"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3de-RH-7h3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3de-RH-7h3">
                                 <rect key="frame" x="129" y="623" width="117" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JBM-ig-5gP"/>
+                                    <constraint firstAttribute="width" constant="117" id="eGj-Bq-eNJ"/>
+                                </constraints>
                                 <state key="normal" image="mapViewBotao2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -37,9 +41,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xxL-SF-sTf" firstAttribute="top" secondItem="Wpq-fn-y6u" secondAttribute="topMargin" id="2er-rx-EmO"/>
+                            <constraint firstItem="3de-RH-7h3" firstAttribute="centerX" secondItem="xxL-SF-sTf" secondAttribute="centerX" id="3Mv-QF-A2P"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xxL-SF-sTf" secondAttribute="trailing" constant="-16" id="DOf-xO-D25"/>
                             <constraint firstItem="xxL-SF-sTf" firstAttribute="leading" secondItem="Wpq-fn-y6u" secondAttribute="leadingMargin" constant="-16" id="VdV-6i-dRp"/>
                             <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="xxL-SF-sTf" secondAttribute="bottom" id="aEh-gG-Pt0"/>
+                            <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="3de-RH-7h3" secondAttribute="bottom" id="xHZ-wR-Jim"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yir-Fk-E2S"/>
@@ -156,25 +162,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-h0-AxW">
-                                <rect key="frame" x="0.0" y="610" width="375" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="5XF-7O-bQQ"/>
-                                </constraints>
-                                <state key="normal" image="botaoSalvar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btSalvar:" destination="7AH-cF-VRA" eventType="touchUpInside" id="wRp-kJ-JGT"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Escrever Título" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ne6-95-i15">
                                 <rect key="frame" x="44" y="331" width="287" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-cC-cTL">
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkK-cC-cTL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="303" id="FFA-IQ-way"/>
@@ -192,17 +186,7 @@
                                     <action selector="btMaisFoto:" destination="7AH-cF-VRA" eventType="touchUpInside" id="fx9-6D-jS4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUb-6p-LlM">
-                                <rect key="frame" x="44" y="543" width="287" height="59"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BotaoAudio">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btAudio:" destination="7AH-cF-VRA" eventType="touchUpInside" id="3so-As-TDc"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" ambiguous="YES" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
                                 <rect key="frame" x="44" y="382" width="287" height="128"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -212,6 +196,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0H-h0-AxW">
+                                <rect key="frame" x="0.0" y="610" width="375" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="5XF-7O-bQQ"/>
+                                </constraints>
+                                <state key="normal" image="botaoSalvar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btSalvar:" destination="7AH-cF-VRA" eventType="touchUpInside" id="wRp-kJ-JGT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -221,18 +217,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Ne6-95-i15" secondAttribute="trailing" constant="28" id="D4G-Qe-x86"/>
                             <constraint firstItem="Ne6-95-i15" firstAttribute="top" secondItem="XkK-cC-cTL" secondAttribute="bottom" constant="8" id="Dkk-Bs-GiD"/>
                             <constraint firstItem="XkK-cC-cTL" firstAttribute="top" secondItem="JmO-aR-p8m" secondAttribute="topMargin" constant="20" id="H4i-48-o6x"/>
-                            <constraint firstItem="h86-c1-y6Z" firstAttribute="leading" secondItem="pUb-6p-LlM" secondAttribute="leading" id="HXJ-1Y-Uo9"/>
                             <constraint firstItem="c0H-h0-AxW" firstAttribute="leading" secondItem="JmO-aR-p8m" secondAttribute="leadingMargin" constant="-16" id="I7Z-q2-rOb"/>
                             <constraint firstItem="XkK-cC-cTL" firstAttribute="leading" secondItem="JmO-aR-p8m" secondAttribute="leadingMargin" constant="-16" id="Lb8-yQ-BF1"/>
                             <constraint firstItem="h86-c1-y6Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ne6-95-i15" secondAttribute="bottom" constant="8" id="MEO-ah-IIw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XkK-cC-cTL" secondAttribute="trailing" constant="-16" id="aMy-vO-PzF"/>
+                            <constraint firstItem="c0H-h0-AxW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="h86-c1-y6Z" secondAttribute="bottom" constant="8" id="cGE-ZP-Drl"/>
                             <constraint firstItem="h86-c1-y6Z" firstAttribute="top" relation="lessThanOrEqual" secondItem="Ne6-95-i15" secondAttribute="bottom" constant="21" id="cdq-5m-P9o"/>
                             <constraint firstItem="T3y-0d-bK5" firstAttribute="top" secondItem="c0H-h0-AxW" secondAttribute="bottom" id="fRv-Nm-Wg4"/>
-                            <constraint firstItem="pUb-6p-LlM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="h86-c1-y6Z" secondAttribute="bottom" constant="8" id="gPC-Fs-60B"/>
+                            <constraint firstItem="c0H-h0-AxW" firstAttribute="top" relation="lessThanOrEqual" secondItem="h86-c1-y6Z" secondAttribute="bottom" constant="100" id="g0I-BG-1OK"/>
                             <constraint firstItem="Ne6-95-i15" firstAttribute="width" secondItem="h86-c1-y6Z" secondAttribute="width" id="tjc-Cw-etn"/>
-                            <constraint firstItem="c0H-h0-AxW" firstAttribute="top" secondItem="pUb-6p-LlM" secondAttribute="bottom" constant="8" id="umC-Vf-ugT"/>
                             <constraint firstItem="Ne6-95-i15" firstAttribute="leading" secondItem="JmO-aR-p8m" secondAttribute="leadingMargin" constant="28" id="vXb-vX-wfI"/>
-                            <constraint firstItem="pUb-6p-LlM" firstAttribute="width" secondItem="h86-c1-y6Z" secondAttribute="width" id="z03-5q-nsZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t78-Tm-c94"/>
@@ -429,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgN-cb-2Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308.5" y="-387.5"/>
+            <point key="canvasLocation" x="57.5" y="-387.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YLe-nd-2tr">
@@ -452,7 +446,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BotaoAudio" width="287" height="59"/>
         <image name="botaoDeMais" width="1560" height="1331"/>
         <image name="botaoSalvar" width="370" height="59"/>
         <image name="mapViewBotao2" width="117" height="44"/>
