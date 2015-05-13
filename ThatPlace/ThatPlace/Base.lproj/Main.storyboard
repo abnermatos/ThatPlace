@@ -25,12 +25,12 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3de-RH-7h3">
-                                <rect key="frame" x="129" y="623" width="117" height="44"/>
+                                <rect key="frame" x="300" y="615" width="59" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="GAX-bc-i6p"/>
                                     <constraint firstAttribute="height" constant="44" id="JBM-ig-5gP"/>
-                                    <constraint firstAttribute="width" constant="117" id="eGj-Bq-eNJ"/>
                                 </constraints>
-                                <state key="normal" image="mapViewBotao2">
+                                <state key="normal" image="mapViewBotao1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -41,11 +41,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xxL-SF-sTf" firstAttribute="top" secondItem="Wpq-fn-y6u" secondAttribute="topMargin" id="2er-rx-EmO"/>
-                            <constraint firstItem="3de-RH-7h3" firstAttribute="centerX" secondItem="xxL-SF-sTf" secondAttribute="centerX" id="3Mv-QF-A2P"/>
+                            <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="3de-RH-7h3" secondAttribute="bottom" constant="8" id="6TP-VN-wJ5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xxL-SF-sTf" secondAttribute="trailing" constant="-16" id="DOf-xO-D25"/>
                             <constraint firstItem="xxL-SF-sTf" firstAttribute="leading" secondItem="Wpq-fn-y6u" secondAttribute="leadingMargin" constant="-16" id="VdV-6i-dRp"/>
                             <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="xxL-SF-sTf" secondAttribute="bottom" id="aEh-gG-Pt0"/>
-                            <constraint firstItem="fix-oy-Kbj" firstAttribute="top" secondItem="3de-RH-7h3" secondAttribute="bottom" id="xHZ-wR-Jim"/>
+                            <constraint firstItem="3de-RH-7h3" firstAttribute="trailing" secondItem="Wpq-fn-y6u" secondAttribute="trailingMargin" id="c4V-AU-TiF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yir-Fk-E2S"/>
@@ -71,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69a-N0-lFA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="69a-N0-lFA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -119,25 +119,13 @@
                                     <outlet property="delegate" destination="bSz-8t-oZC" id="L7h-Fg-rqD"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVD-g4-jNb">
-                                <rect key="frame" x="129" y="20" width="117" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="254-bc-kAJ"/>
-                                    <constraint firstAttribute="width" constant="117" id="NyQ-dI-dsA"/>
-                                </constraints>
-                                <state key="normal" image="mapViewBotao2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FWp-aX-xfl" firstAttribute="top" secondItem="69a-N0-lFA" secondAttribute="bottom" id="8EM-xM-lK0"/>
-                            <constraint firstItem="eVD-g4-jNb" firstAttribute="top" secondItem="sQ5-4P-aP0" secondAttribute="bottom" id="JIE-Kw-YhF"/>
-                            <constraint firstAttribute="centerX" secondItem="eVD-g4-jNb" secondAttribute="centerX" id="OHE-Bg-FEp"/>
                             <constraint firstItem="69a-N0-lFA" firstAttribute="leading" secondItem="Nzc-y2-Ghk" secondAttribute="leadingMargin" constant="-16" id="QMl-Bg-DUr"/>
+                            <constraint firstItem="69a-N0-lFA" firstAttribute="top" secondItem="Nzc-y2-Ghk" secondAttribute="topMargin" constant="20" id="dQn-0L-gp6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="69a-N0-lFA" secondAttribute="trailing" constant="-16" id="ijI-GO-59b"/>
-                            <constraint firstItem="69a-N0-lFA" firstAttribute="topMargin" secondItem="sQ5-4P-aP0" secondAttribute="bottom" constant="8" id="y5r-Oo-Vs2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xDf-tT-mIv"/>
@@ -448,6 +436,6 @@
     <resources>
         <image name="botaoDeMais" width="1560" height="1331"/>
         <image name="botaoSalvar" width="370" height="59"/>
-        <image name="mapViewBotao2" width="117" height="44"/>
+        <image name="mapViewBotao1" width="59" height="49"/>
     </resources>
 </document>
