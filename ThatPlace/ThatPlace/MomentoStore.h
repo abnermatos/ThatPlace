@@ -7,16 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Momento.h"
 @import CoreData;
-
 @interface MomentoStore : NSObject
-
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 + (instancetype)sharedStore;
 
-- (Momento*)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
-- (BOOL)saveChanges;
--(void)removeMomento:(Momento*)momento;
-@end
+- (void)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString*)descricao andIdUsuario:(NSString*)idUsuario;
+-(NSArray*)getAllMomento;
+-(void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
+@end;
