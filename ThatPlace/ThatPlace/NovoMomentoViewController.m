@@ -31,16 +31,22 @@
     //Gravar audio
 }
 - (IBAction)btSalvar:(id)sender {
+    NSLog(@"RECONHECEU O BOTAO SALVAR"); //OK
     if (!self.momento) {
-        self.momento = [[MomentoStore sharedStore]createMomentoWithTitulo:self.tfTitulo.text andDescricao: self.tvDescricao.text andIdUsuario:0];
+        NSLog(@"ENTROU NO IF"); //OK
+        self.momento = [[MomentoStore sharedStore]createMomentoWithTitulo:self.tfTitulo.text andDescricao: self.tvDescricao.text andIdUsuario:@"LOL"];
+        NSLog(@"FIM DO IF");
     } else {
+        NSLog(@"ENTROU NO ELSE");
         self.momento.titulo = self.tfTitulo.text;
         self.momento.descricao = self.tvDescricao.text;
+        NSLog(@"FIM DO ELSE");
     }
-    
+    NSLog(@"DEPOIS DO ELSE");
     [[MomentoStore sharedStore] saveChanges];
-    
+    NSLog(@"DEPOIS DO SAV CHANGES");
     [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"APOS ANIMATED");
 }
 
 @end

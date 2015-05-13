@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Momento : NSObject
+@import UIKit;
+@interface Momento : NSManagedObject
 
 @property (nonatomic, retain) NSString* id;
 @property (nonatomic, retain) NSString* titulo;

@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Usuario : NSObject
+@import UIKit;
+@interface Usuario : NSManagedObject
 
 @property (nonatomic, retain) NSString* id;
 @property (nonatomic, retain) NSString* nome;
