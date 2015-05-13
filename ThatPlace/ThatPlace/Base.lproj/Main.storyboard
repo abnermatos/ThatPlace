@@ -220,7 +220,7 @@
                                     <action selector="btAudio:" destination="7AH-cF-VRA" eventType="touchUpInside" id="3so-As-TDc"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" ambiguous="YES" misplaced="YES" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="500" ambiguous="YES" text="Escrever Descrição" translatesAutoresizingMaskIntoConstraints="NO" id="h86-c1-y6Z">
                                 <rect key="frame" x="44" y="382" width="287" height="128"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12" colorSpace="calibratedRGB"/>
                                 <constraints>
