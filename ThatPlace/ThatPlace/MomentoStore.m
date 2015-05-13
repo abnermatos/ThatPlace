@@ -31,7 +31,6 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Momento";
         
         [sharedStore resetStoredData];
     }
-    NSLog(@"OK ATÉ AQUI"); //OK
     return sharedStore;
 }
 

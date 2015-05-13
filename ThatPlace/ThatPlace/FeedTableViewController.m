@@ -29,7 +29,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (NSFetchedResultsController *)fetchedResultsController {
-    NSLog(@"LOLOLOLOL 1");
     return [[MomentoStore sharedStore] fetchedResultsController];
 }
 
@@ -37,11 +36,9 @@
     return [[self.fetchedResultsController sections][section] numberOfObjects];
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"LOLOLOLOL 2");
     FeedTableViewCell1 *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1"];
     
     Momento *momento = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSLog(@"LOLLLOLOL 3");
     cell.lbTitulo.text = momento.titulo;
     //FALTA DATA E FOTO
     
