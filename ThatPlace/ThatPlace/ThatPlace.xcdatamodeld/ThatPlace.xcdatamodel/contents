@@ -17,8 +17,8 @@
         <attribute name="senha" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Usuario" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Momento" positionX="-54" positionY="9" width="128" height="105"/>
         <element name="Recurso" positionX="-36" positionY="45" width="128" height="90"/>
+        <element name="Usuario" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

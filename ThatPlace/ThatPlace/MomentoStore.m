@@ -40,9 +40,11 @@ static NSString *DATA_MODEL_ENTITY_NAME = @"Momento";
 }
 -(Momento *)createMomentoWithTitulo:(NSString *)titulo andDescricao:(NSString *)descricao andIdUsuario:(NSString *)idUsuario{
     
-    Momento *momento = [NSEntityDescription
-                                insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
-                                inManagedObjectContext:self.managedObjectContext];
+//    Momento *momento = [NSEntityDescription
+//                                insertNewObjectForEntityForName:DATA_MODEL_ENTITY_NAME
+//                                inManagedObjectContext:self.managedObjectContext];
+    Momento *momento = [NSEntityDescription insertNewObjectForEntityForName:@"Momento" inManagedObjectContext:self.managedObjectContext];
+    
     momento.id = [[[NSUUID alloc] init] UUIDString];
     momento.titulo = titulo;
     momento.descricao = descricao;
